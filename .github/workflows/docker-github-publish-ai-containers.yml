@@ -8,7 +8,7 @@ on:
 
 env:
   GHCR_REGISTRY: ghcr.io
-  GHCR_DESTINATION_ORG: ghcr.io/arduino
+  GHCR_DESTINATION_ORG: ghcr.io/nltd2010
   GH_DESTINATION_REPO: https://github.com/NLTD2010/app-bricks-py
 
 permissions:
@@ -72,7 +72,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64 # Add AMD64 build
           cache-from: type=gha
           cache-to: type=gha,mode=max
           provenance: false
